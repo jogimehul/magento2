@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="mehul_contacts::core" title="Mehul" module="Mehul_Contacts" sortOrder="90" resource="Mehul_Contacts::menu" dependsOnConfig="mehul/contacts/enabled"/>
+        <add id="mehul_contacts::list" title="Contacts" module="Mehul_Contacts" sortOrder="10" parent="mehul_contacts::core" action="mehul_contacts/items/" resource="Mehul_Contacts::items" dependsOnConfig="mehul/contacts/enabled"/>
+    </menu>
+</config>

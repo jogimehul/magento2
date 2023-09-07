@@ -1,0 +1,22 @@
+{
+    "name": "mehul/magento2-contact-module",
+    "description": "Contacts CRUD actions",
+    "require": {
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "extra": {
+        "map": [
+            [
+                "*",
+                "Mehul/Contacts"
+            ]
+        ]
+    },
+    "authors": [
+        {
+            "name": "Mehul Jogi",
+            "role": "Developer"
+        }
+    ]
+}

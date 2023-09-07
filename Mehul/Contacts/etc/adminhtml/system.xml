@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mehul" translate="label" sortOrder="10">
+            <label>Mehul</label>
+        </tab>
+        <section id="mehul" translate="label" type="text" sortOrder="10" showInDefault="1">
+            <label>Mehul</label>
+            <tab>mehul</tab>
+            <class>separator-top</class>
+            <resource>Mehul_Contacts::config</resource>
+            <group id="contacts" translate="label" type="text" sortOrder="10" showInDefault="1">
+                <label>Contacts</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="1" showInDefault="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Allow Magento to enable/disable module functionality. You can see contact list in this url: MAGENTO_BASE_URL/contacts</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

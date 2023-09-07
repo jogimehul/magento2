@@ -1,0 +1,29 @@
+<?php $collection = $block->getContactsCollection(); ?>
+<?php if ($collection->count() > 0): ?>
+    <table class="data table" id="contacts-data-table">
+        <caption class="table-caption"><?= __("Mehul Contacts Data") ?></caption>
+        <thead>
+            <tr>
+                <th scope="col" class="col name"><?= __("Name") ?></th>
+                <th scope="col" class="col surname"><?= __("Surname") ?></th>
+                <th scope="col" class="col email"><?= __("Email") ?></th>
+                <th scope="col" class="col created_at"><?= __("Created At") ?></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($collection as $key => $data): ?>
+                <tr>
+                    <td data-th="Name" class="col name"><?= $data->getName(); ?></td>
+                    <td data-th="Surname" class="col surname"><?= $data->getSurname(); ?></td>
+                    <td data-th="Email" class="col email"><?= $data->getEmail(); ?></td>
+                    <td data-th="Date" class="col created_at"><?= $data->getCreatedAt(); ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    <?php if ($block->getPagerHtml()): ?>
+        <div class="order-products-toolbar toolbar bottom"><?= $block->getPagerHtml(); ?></div>
+    <?php endif ?>
+<?php else: ?>
+    <h2><?= __("We couldn't find any contacts") ?></h2>
+<?php endif; ?>
